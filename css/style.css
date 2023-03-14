@@ -13,6 +13,8 @@
     --logo-color:#4D5AE5;
     --logo-heder-color:#2E2F42;
     --logo-footer-color:#F4F4FD;
+    --border-company-color:#8E8F99;
+    --footer-hover-icin-color:#31D0AA;
     
 }
 a{
@@ -153,16 +155,7 @@ button{
     
     color: var(--seconari-text-color);
 }
-.line{
-    position: absolute;
-  width: 1440px;
-  height: 0px;
-  left: 0px;
-  top: 72px;
 
-
-  background-color: var(--bg-color);
-  border: 1px solid var(--footer-text-color);}
 
 
     .adres__meil:hover,
@@ -178,7 +171,23 @@ button{
         padding-top: 188px;
         padding-bottom: 188px;
         text-align: center;
+       
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/owerlof.jpg);
+height: 600px;
+max-width: 1440px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+margin-left: auto;
+margin-right:  auto;
+
+      
     }
+  
+       
+      
+    
+ 
     .hero-title {
       
         max-width: 496px;
@@ -211,7 +220,7 @@ button{
     }
     .button:hover, .button:focus{
         background-color: var(--portfolio-buuton-bg-hover-color);
-     
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     }
     .visually-hidden {
@@ -236,7 +245,32 @@ button{
         .advantages__item:not(:last-child){
             margin-right: 24px;
             min-width: 264px;
-   
+           
+           }
+           .advantages__item::before{
+            content: "";
+            display: block;
+            height: 112px;
+            order: 0;
+           flex-grow: 0;
+         
+           background: var(--portfolio-buuton-bg-color);
+           border-radius: 4px;
+           background-repeat: no-repeat;
+           background-position: center;
+           
+           }
+           .icon1::before{
+            background-image: url(../images/advantages1.svg);
+           }
+           .icon2::before{
+            background-image: url(../images/advantages2.svg);
+           }
+           .icon3::before{
+            background-image: url(../images/advantages3.svg);
+           }
+           .icon4::before{
+            background-image: url(../images/advantages4.svg);
            }
       
         .advantages__title {
@@ -319,6 +353,7 @@ button{
         }
         .team__item{
             border-radius: 0px 0px 4px 4px;
+            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         }
         .team__photo {
             display: block;
@@ -338,12 +373,13 @@ button{
             
         }
         .stule_team{
-            padding-top: 32px;
-            padding-bottom: 32px;
+            padding: 32px 16px;
+
             background-color: var(--bg-color);
         }
         .team__text {
            margin-top: 8px;
+           margin-bottom: 8px;
             text-align: center;
             
 
@@ -351,12 +387,147 @@ button{
             line-height: 1.5;
             letter-spacing: 0.02em;
             color: var(--seconari-text-color);
+            
+        }
+        .social-network:not(:last-child){
+            margin-right: 20px;
+            flex-wrap: nowrap;
+        }
+        .social-network{
+            display:inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--portfolio-buuton-color);
+           background-repeat: no-repeat;
+           background-size: 16px ;
+           background-position: center;
+           border-radius: 50px;
 
+           
+        }
+        .social-network:hover,
+        .social-network:focus{
+            background-color: var(--portfolio-buuton-bg-hover-color);
+        }
+
+        .instagram {
+            background-image: url(../images/instagram.svg) ;
+            
+        }
+        .twitter {
+            background-image: url(../images/twitter.svg);
+        }
+        .facabook {
+        background-image: url(../images/facebook.svg);}
+        .LinkedIn {
+            background-image: url(../images/linkedin.svg);
+        }
+        .Customers{
+            background-color: var(--bg-color);
+            padding-top: 130px ;
+            padding-bottom: 120px ;
+        }
+        .Customers__title{
+            font-size: 36px;
+            line-height: 1.11px; 
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color:var(--color-text-color);
+            text-align: center;
+            margin-bottom: 72px;
+        }
+        .Customers__list{
+            display:flex;
+
+        }
+        .Customers__item:not(:last-child){
+            margin-right: 24px;
+        }
+        .Customers__link{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 168px;
+            height: 88px;
+            background-repeat: no-repeat;
+            background-position: center;
+         
+
+            border: 1px solid var(--border-company-color);
+            border-radius: 4px;
+            
+        }
+        
+        .Customers__link:hover,
+        .Customers__link:focus{
+            border: 1px solid var(--portfolio-buuton-bg-hover-color) ;
+            background-image: var(--portfolio-buuton-bg-hover-color);
+           
+        }
+ 
+        .company1{ fill: var(--border-company-color);
+            display: flex;
+            justify-content:center;
+          
+      
+        }
+        .company2{fill: var(--border-company-color);
+        display: flex;
+            justify-content: center;
+        
+              
+        }
+        .company3{fill: var(--border-company-color);
+            display: flex;
+            justify-content: center;
+           
+            
+        }
+        .company4{fill: var(--border-company-color);
+            display: flex;
+            justify-content: center;
+           
+          
+        }
+        .company5{fill: var(--border-company-color);
+            display: flex;
+            justify-content: center;
+           
+        }
+        .company6{fill: var(--border-company-color) ;
+            display: flex;
+            justify-content: center;
+           
+        
+       
+        }
+        .company1:hover,
+        .company1:focus{
+            fill:var(--portfolio-buuton-bg-hover-color);
+        }  .company2:hover,
+        .company2:focus{
+            fill:var(--portfolio-buuton-bg-hover-color);
+        }  .company3:hover,
+        .company3:focus{
+            fill:var(--portfolio-buuton-bg-hover-color);
+        }  .company4:hover,
+        .company4:focus{
+            fill:var(--portfolio-buuton-bg-hover-color);
+        }  .company5:hover,
+        .company5:focus{
+            fill:var(--portfolio-buuton-bg-hover-color);
+        }  .company6:hover,
+        .company6:focus{
+            fill:var(--portfolio-buuton-bg-hover-color);
         }
         .footer {
             background-color: var(--hero-and-footer-bg-color);
             padding-top: 100px;
             padding-bottom: 100px;
+            
+        }
+        .flex{
+            display: flex;
         }
         .footer-conteiner{
             background-color: var(--hero-and-footer-bg-color);
@@ -382,7 +553,60 @@ button{
           letter-spacing: 0.02em;
           color: var(--footer-text-color);
         }
-/* portfolio */
+        .footer-flex-block{
+            margin-left: 120px;
+        }
+        .social-media {
+            font-weight: 500;
+             font-size: 16px;
+             line-height: 1.5;
+             letter-spacing: 0.02em;
+             color: var(--bg-color);
+
+        }
+        .social-item:not(:last-child){
+            margin-right: 16px;
+
+        }
+        .social-links{
+            margin-top: 16px;
+                 display: flex; 
+        }
+        .social-links .links{
+            display: flex;
+             align-items: center; 
+             width: 44px; 
+             height: 44px; 
+             border-radius: 50%; 
+             background-size: 20px; 
+             background-repeat: no-repeat; 
+             background-position: center; 
+             
+    
+        }
+        .footer-links {
+        }
+        .links {
+            background-color:var(--border-company-color);
+        }
+        .links:hover,
+        .links:focus{
+            background-color: var(--footer-hover-icin-color);
+        }
+       
+        .link-icon {
+            
+        }
+
+
+
+
+                                        /* portfolio */
+
+
+
+
+
 .menu{
     padding-top: 96px; 
     padding-bottom: 120px;
@@ -405,14 +629,17 @@ border-radius: 4px;
 .lists__buuton:hover{
     color: var(--bg-color);
     background-color: var(--portfolio-buuton-bg-hover-color);
-   border: transparent;
-   
+   border: 1px solid var(--portfolio-buuton-bg-hover-color);
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
 }
 .porfolio {
 
 }
-.porfolio__item {
+.porfolio__item:hover,
+.porfolio__item:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
 .porfolio__photo {
    
@@ -470,11 +697,16 @@ color:var(--color-text-color)
         max-width: 360px; 
     }
     .border{
-        
         border-left: 1px solid var(--footer-text-color);
         border-right: 1px solid var(--footer-text-color); 
         border-bottom: 1px solid var(--footer-text-color);
         padding: 32px 16px;
+    }
+    .border:hover,
+    .border:focus{
+        border-left: 1px solid var(--portfolio-buuton-bg-color);
+        border-right:  1px solid var(--portfolio-buuton-bg-color);
+        border-bottom:1px solid var(--portfolio-buuton-bg-color) ;
     }
 .porfolio__photo {
     display: block;
