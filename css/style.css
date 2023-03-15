@@ -45,7 +45,7 @@ body{
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--footer-text-color);
-   
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
    }
 .conteiner{
     width: 1158px;
@@ -173,7 +173,6 @@ button{
         text-align: center;
        
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/owerlof.jpg);
-height: 600px;
 max-width: 1440px;
 background-repeat: no-repeat;
 background-position: center;
@@ -252,7 +251,7 @@ margin-right:  auto;
             display: block;
             height: 112px;
             order: 0;
-           flex-grow: 0;
+           
          
            background: var(--portfolio-buuton-bg-color);
            border-radius: 4px;
@@ -389,39 +388,33 @@ margin-right:  auto;
             color: var(--seconari-text-color);
             
         }
-        .social-network:not(:last-child){
-            margin-right: 20px;
-            flex-wrap: nowrap;
+        .team__list-link{
+            display: flex;
         }
-        .social-network{
-            display:inline-block;
-            width: 40px;
-            height: 40px;
-            background: var(--portfolio-buuton-color);
-           background-repeat: no-repeat;
-           background-size: 16px ;
-           background-position: center;
-           border-radius: 50px;
 
-           
+        .link_team{
+            display: flex;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: var(--logo-color);
         }
-        .social-network:hover,
-        .social-network:focus{
+        .link_team:hover,
+        .link_team:focus{
             background-color: var(--portfolio-buuton-bg-hover-color);
         }
+      .team__item-link:not(:last-child){
+        margin-right: 24px;
+      }
 
-        .instagram {
-            background-image: url(../images/instagram.svg) ;
-            
-        }
-        .twitter {
-            background-image: url(../images/twitter.svg);
-        }
-        .facabook {
-        background-image: url(../images/facebook.svg);}
-        .LinkedIn {
-            background-image: url(../images/linkedin.svg);
-        }
+           
+      
+
+       
         .Customers{
             background-color: var(--bg-color);
             padding-top: 130px ;
@@ -429,7 +422,7 @@ margin-right:  auto;
         }
         .Customers__title{
             font-size: 36px;
-            line-height: 1.11px; 
+            line-height: 1.11; 
             letter-spacing: 0.02em;
             text-transform: capitalize;
             color:var(--color-text-color);
@@ -443,6 +436,7 @@ margin-right:  auto;
         .Customers__item:not(:last-child){
             margin-right: 24px;
         }
+        
         .Customers__link{
             display: flex;
             justify-content: center;
@@ -451,7 +445,8 @@ margin-right:  auto;
             height: 88px;
             background-repeat: no-repeat;
             background-position: center;
-         
+            color: var(--border-company-color);
+    
 
             border: 1px solid var(--border-company-color);
             border-radius: 4px;
@@ -461,65 +456,48 @@ margin-right:  auto;
         .Customers__link:hover,
         .Customers__link:focus{
             border: 1px solid var(--portfolio-buuton-bg-hover-color) ;
-            background-image: var(--portfolio-buuton-bg-hover-color);
-           
+            color: var(--portfolio-buuton-bg-hover-color);
+        
         }
  
-        .company1{ fill: var(--border-company-color);
+        .company1{ fill:currentColor;
             display: flex;
             justify-content:center;
           
       
         }
-        .company2{fill: var(--border-company-color);
+        .company2{fill: currentColor;
         display: flex;
             justify-content: center;
         
               
         }
-        .company3{fill: var(--border-company-color);
+        .company3{fill: currentColor;
             display: flex;
             justify-content: center;
+            
            
             
         }
-        .company4{fill: var(--border-company-color);
+        .company4{fill: currentColor;
             display: flex;
             justify-content: center;
            
           
         }
-        .company5{fill: var(--border-company-color);
+        .company5{fill:currentColor;
             display: flex;
             justify-content: center;
            
         }
-        .company6{fill: var(--border-company-color) ;
+        .company6{fill: currentColor ;
             display: flex;
             justify-content: center;
            
         
        
         }
-        .company1:hover,
-        .company1:focus{
-            fill:var(--portfolio-buuton-bg-hover-color);
-        }  .company2:hover,
-        .company2:focus{
-            fill:var(--portfolio-buuton-bg-hover-color);
-        }  .company3:hover,
-        .company3:focus{
-            fill:var(--portfolio-buuton-bg-hover-color);
-        }  .company4:hover,
-        .company4:focus{
-            fill:var(--portfolio-buuton-bg-hover-color);
-        }  .company5:hover,
-        .company5:focus{
-            fill:var(--portfolio-buuton-bg-hover-color);
-        }  .company6:hover,
-        .company6:focus{
-            fill:var(--portfolio-buuton-bg-hover-color);
-        }
+    
         .footer {
             background-color: var(--hero-and-footer-bg-color);
             padding-top: 100px;
@@ -636,10 +614,13 @@ border-radius: 4px;
 .porfolio {
 
 }
-.porfolio__item:hover,
-.porfolio__item:focus {
+.portfolio-link{
+
+}
+.portfolio-link:hover,
+.portfolio-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    
+   display: block;
 }
 .porfolio__photo {
    
@@ -693,7 +674,7 @@ color:var(--color-text-color)
     
   
     .porfolio__item{
-       
+        
         max-width: 360px; 
     }
     .border{
@@ -702,12 +683,7 @@ color:var(--color-text-color)
         border-bottom: 1px solid var(--footer-text-color);
         padding: 32px 16px;
     }
-    .border:hover,
-    .border:focus{
-        border-left: 1px solid var(--portfolio-buuton-bg-color);
-        border-right:  1px solid var(--portfolio-buuton-bg-color);
-        border-bottom:1px solid var(--portfolio-buuton-bg-color) ;
-    }
+  
 .porfolio__photo {
     display: block;
     
