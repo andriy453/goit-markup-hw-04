@@ -274,7 +274,8 @@ margin-right:  auto;
       
         .advantages__title {
             text-align: left;
-            margin-bottom: 8px; ;
+            margin-bottom: 8px; 
+            margin-top: 8px;
 
             font-weight: 500;
             font-size: 20px;
@@ -395,8 +396,9 @@ margin-right:  auto;
         .link_team{
             display: flex;
             align-items: center;
-            width: 44px;
-            height: 44px;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background-size: 20px;
             background-repeat: no-repeat;
@@ -552,27 +554,34 @@ margin-right:  auto;
         }
         .social-links .links{
             display: flex;
+            justify-content: center;
              align-items: center; 
-             width: 44px; 
-             height: 44px; 
+             width: 40px; 
+             height: 40px; 
              border-radius: 50%; 
              background-size: 20px; 
              background-repeat: no-repeat; 
              background-position: center; 
-             
-    
+             color: var(--logo-footer-color);
+           
         }
         .footer-links {
         }
         .links {
-            background-color:var(--border-company-color);
+           
+           background-color:var(--seconari-text-color);
+          
+          
         }
         .links:hover,
         .links:focus{
-            background-color: var(--footer-hover-icin-color);
+            background-color:var(--footer-hover-icin-color);
+           
+
         }
        
         .link-icon {
+            color: var(--bg-color);
             
         }
 
@@ -615,12 +624,12 @@ border-radius: 4px;
 
 }
 .portfolio-link{
-
+    display: inline-block;
 }
 .portfolio-link:hover,
 .portfolio-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-   display: block;
+  
 }
 .porfolio__photo {
    
